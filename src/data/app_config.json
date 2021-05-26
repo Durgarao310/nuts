@@ -1,0 +1,18 @@
+{
+    "auth0" : {
+        "domain": "Your Auth Domain",
+        "clientID": "Your clientId",
+        "redirectUri": "Your callback URL"
+    },
+    "firebase" : {
+        "apiKey": "Your Firebase API",
+        "authDomain":"Your Firebase AuthDomain",
+        "databaseURL": "Your Firebase Database URL",
+        "projectId": "Your Firebase ProjectID",
+        "storageBucket": "Your Firebase StorageBucket Id",
+        "messagingSenderId": "Your Firebase SenderId",
+        "appId":"Your Firebase APP Id"
+    },
+    "jwt_token" : null
+}
+  
