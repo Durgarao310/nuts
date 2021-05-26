@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/endless/static/css/main.70d6091e.chunk.css",
+    "main.js": "/endless/static/js/main.a60ef75a.chunk.js",
+    "main.js.map": "/endless/static/js/main.a60ef75a.chunk.js.map",
+    "runtime-main.js": "/endless/static/js/runtime-main.76a2ad3e.js",
+    "runtime-main.js.map": "/endless/static/js/runtime-main.76a2ad3e.js.map",
+    "static/css/2.b622c1eb.chunk.css": "/endless/static/css/2.b622c1eb.chunk.css",
+    "static/js/2.b05097da.chunk.js": "/endless/static/js/2.b05097da.chunk.js",
+    "static/js/2.b05097da.chunk.js.map": "/endless/static/js/2.b05097da.chunk.js.map",
+    "index.html": "/endless/index.html",
+    "precache-manifest.0a63b8799fa9d5a50b88fa110dad2abd.js": "/endless/precache-manifest.0a63b8799fa9d5a50b88fa110dad2abd.js",
+    "service-worker.js": "/endless/service-worker.js",
+    "static/css/2.b622c1eb.chunk.css.map": "/endless/static/css/2.b622c1eb.chunk.css.map",
+    "static/css/main.70d6091e.chunk.css.map": "/endless/static/css/main.70d6091e.chunk.css.map",
+    "static/js/2.b05097da.chunk.js.LICENSE.txt": "/endless/static/js/2.b05097da.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/endless/static/media/zw.98a0162e.svg",
+    "static/media/1.jpg": "/endless/static/media/1.61ad1010.jpg",
+    "static/media/6.jpg": "/endless/static/media/6.8af8ce2a.jpg",
+    "static/media/7.jpg": "/endless/static/media/7.5191071c.jpg",
+    "static/media/8.jpg": "/endless/static/media/8.c7f78c54.jpg",
+    "static/media/endless-logo.png": "/endless/static/media/endless-logo.ee8631c3.png",
+    "static/media/product.png": "/endless/static/media/product.75cfd8a1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76a2ad3e.js",
+    "static/css/2.b622c1eb.chunk.css",
+    "static/js/2.b05097da.chunk.js",
+    "static/css/main.70d6091e.chunk.css",
+    "static/js/main.a60ef75a.chunk.js"
+  ]
+}
