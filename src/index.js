@@ -16,6 +16,7 @@ import { Auth0Provider } from '@auth0/auth0-react'
 import FormValidation from './components/forms/form-control/form-validation';
 import BaseInput from './components/forms/form-control/baseInput';
 import BaseEdit from './components/forms/form-control/baseedit';
+import AddCoupons from './components/forms/form-control/addcoupons';
 
 
 // tables 
@@ -152,9 +153,11 @@ const Root = () => {
                                     {/* Users */}
                                     <Route path={`${process.env.PUBLIC_URL}/users/userProfile`} component={UserProfile} />
 
+                                   
                                     {/* coupons */}
+                                    
                                     <Route path={`${process.env.PUBLIC_URL}/coupons`} component={Coupons} />
-
+                                    <Route path={`${process.env.PUBLIC_URL}/add/coupons`} component={AddCoupons} />
 
                          </App>
                              :

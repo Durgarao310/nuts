@@ -39,10 +39,10 @@ const Signin = ({history}) => {
         setLoading(true)
         e.preventDefault()
         try {
-            const user = await axios.post("http://localhost:8080/api/v1/admin/login",{email, password})
+            const user = await axios.post("http://localhost:7426/api/v1/admin/login",{email, password})
             setValue(user.data.name);
             localStorage.setItem("token", user.data.token)
-            history.push(`${process.env.PUBLIC_URL}/orders`);
+            window.location = (`${process.env.PUBLIC_URL}/orders`);
             window.location.reload()
         } catch (error) {
             setTimeout(() => {

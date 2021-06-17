@@ -63,7 +63,7 @@ const DataTableComponent = ({history}) => {
         const prd = async()=>{
             try{
               setLoading(true)
-                const rep = await axios.get("http://localhost:8080/api/v1/admin/products",
+                const rep = await axios.get("http://localhost:7426/api/v1/item/",
                 config
                 )
                 setProducts(rep.data.content)
@@ -98,7 +98,7 @@ const DataTableComponent = ({history}) => {
       const p = async()=>{
           setLoading(true)
           try{
-              const rep = await axios.get("http://localhost:8080/api/v1/admin/orders",
+              const rep = await axios.get("http://localhost:7426/api/v1/order/admin/",
               config
               )
               setOrders(rep.data.content)
@@ -182,7 +182,7 @@ const DataTableComponent = ({history}) => {
       }
       try {
         setLoading(true)
-        const res = await axios.patch(`http://localhost:8080/api/v1/admin/orders/${id}`,
+        const res = await axios.patch(`http://localhost:7426/api/v1/order/admin/${id}`,
         {status},config)
         allorders();
         setTimeout(()=>{
@@ -218,7 +218,7 @@ const DataTableComponent = ({history}) => {
         const p = async()=>{
           setLoading(true)
           try{
-              const rep = await axios.get("http://localhost:8080/api/v1/admin/orders",
+              const rep = await axios.get("http://localhost:7426/api/v1/order/admin/",
               config
               )
               setOrders(rep.data.content)
@@ -247,7 +247,7 @@ const DataTableComponent = ({history}) => {
   const searchItem =()=>{
     if(!search){
         setTimeout(() => {
-          toast.error("Oppss... please enter the  product id ");
+          toast.error("Oppss... please enter the  Order id ");
       }, 200);
     }
     if(search.length > 0 && (orders.filter(product => search== product._id)).length == 0 ){
@@ -282,7 +282,7 @@ const DataTableComponent = ({history}) => {
                                     onChange={e => setSearch(e.target.value)}
                                     aria-describedby="search-addon" />
                                 <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={searchItem}>Search</button>
-                                <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={allorders} >All Orders</button>
+                                <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={allorders} ><i className="material-icons" style={{fontSize : "24px", color:"red", display: "center"}}>refresh</i></button>
                             </div>
                     </div>
                     <div className="table-responsive">

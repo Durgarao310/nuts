@@ -28,5 +28,8 @@ export const MENUITEMS = [
     },
     {
         title: 'Coupons', icon: Layers, path: '/coupons', type: 'link', active: false
+    },
+    {
+        title: 'Add Coupons', icon: Layers, path: '/add/coupons', type: 'link', active: false
     }
 ]

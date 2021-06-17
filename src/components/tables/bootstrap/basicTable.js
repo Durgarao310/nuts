@@ -36,11 +36,10 @@ const BasicTables = ({history}) =>{
         const pord = async()=>{
             try{
                 setLoading(true)
-                const rep = await axios.get("http://localhost:8080/api/v1/admin/products",
+                const rep = await axios.get("http://localhost:7426/api/v1/item/",
                 config
                 )
-                console.log(rep.data)
-                console.log(rep.status)
+          
                 setProducts(rep.data.content)
             }
             catch (error) {
@@ -69,7 +68,7 @@ const BasicTables = ({history}) =>{
 
     const removeData = async (id) => {
         setLoading(true)
-        let url = `http://localhost:8080/api/v1/admin/products/${id}`
+        let url = `http://localhost:7426/api/v1/item/${id}`
         await axios.delete(url,
             config
             ).then(res => {
@@ -97,7 +96,7 @@ const BasicTables = ({history}) =>{
         const pord = async()=>{
             try{
                 setLoading(true)
-                const rep = await axios.get("http://localhost:8080/api/v1/admin/products",
+                const rep = await axios.get("http://localhost:7426/api/v1/item/",
                 config
                 )
                 setProducts(rep.data.content)
@@ -160,7 +159,7 @@ const BasicTables = ({history}) =>{
                                                 onChange={e => setSearch(e.target.value)}
                                                 aria-describedby="search-addon" />
                                             <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={searchItem}>Search</button>
-                                            <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={allproducts} >All Products</button>
+                                            <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={allproducts} ><i className="material-icons" style={{fontSize : "24px", color:"red", display: "center"}}>refresh</i></button>
                                         </div>
                             </div>
                             <div className="table-responsive">

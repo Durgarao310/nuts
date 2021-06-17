@@ -36,11 +36,11 @@ const Users = ({history}) =>{
         const pord = async()=>{
             try{
                 setLoading(true)
-                const rep = await axios.get("http://localhost:8080/api/v1/admin/users",
+                const rep = await axios.get("http://localhost:7426/api/v1/user/users",
                 config
                 )
-
-                setUsers(rep.data.content)
+                console.log(rep)
+                setUsers(rep.data)
             }
             catch (error) {
                   setLoading(false)
@@ -69,8 +69,9 @@ const Users = ({history}) =>{
             const pord = async()=>{
                 try{
                     setLoading(true)
-                    const rep = await axios.get("http://localhost:8080/api/v1/admin/users", config)
-                    setUsers(rep.data.content)
+                    const rep = await axios.get("http://localhost:7426/api/v1/user/users", config)
+                    console.log(rep)
+                    setUsers(rep.data)
                     setLoading(false)
                 }
                 catch (error) {
@@ -132,7 +133,7 @@ const Users = ({history}) =>{
                                                 onChange={e => setSearch(e.target.value)}
                                                 aria-describedby="search-addon" />
                                             <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={searchItem}>Search</button>
-                                            <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={getallusers} >All Users</button>
+                                            <button type="submit" className="btn btn-outline-info btn-sm m-1" onClick={getallusers} ><i className="material-icons" style={{fontSize : "24px", color:"red", display: "center"}}>refresh</i></button>
                                         </div>
                             </div>
                             <div className="table-responsive">
@@ -157,8 +158,8 @@ const Users = ({history}) =>{
                                             <td scope="col">{item._id}</td>
                                             {/* <td scope="col"><img style={{height:"10rem", width:"10rem", borderRadius:"5%",  boxShadow: "0.1rem 0.3rem 0.2rem #a39696" }} src={item.url}></img> </td> */}
                                             <td scope="col">{item.email}</td>
-                                            <td scope="col">Rs: {item.phone}</td>
-                                            <td scope="col">{item.address} g</td>
+                                            <td scope="col">{item.phone}</td>
+                                            <td scope="col">{item.address}</td>
 
 
                                         </tr>

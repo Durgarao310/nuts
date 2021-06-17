@@ -46,10 +46,10 @@ const BaseEdit = ({ history }) => {
   useEffect(()=>{
     const pord = async()=>{
         try{
-            const rep = await axios.get(`http://localhost:8080/api/v1/admin/products/${id}`,{headers: {
+            const rep = await axios.get(`http://localhost:7426/api/v1/admin/products/${id}`,{headers: {
               'Authorization':`Bearer ${localStorage.getItem("token")}`
             }})
-            setPrice(rep.data.content.price)
+            setPrice(rep.data.content.price) 
             setFilename(rep.data.content.filename)
             setWeight(rep.data.content.weight)
             setType(rep.data.content.type)
@@ -100,7 +100,7 @@ const BaseEdit = ({ history }) => {
       e.preventDefault()
       try {
           setLoading(true)
-          const products = await axios.patch(`http://localhost:8080/api/v1/admin/products/${id}`, formData,config)
+          const products = await axios.patch(`http://localhost:7426/api/v1/admin/products/${id}`, formData,config)
           history.push(`${process.env.PUBLIC_URL}/products`);
           window.location.reload();
           setTimeout(() => {

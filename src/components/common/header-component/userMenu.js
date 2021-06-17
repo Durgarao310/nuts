@@ -34,7 +34,7 @@ const UserMenu = ({ history }) => {
         <Fragment>
             <li className="onhover-dropdown">
                 <div className="media align-items-center">
-                    <h4 className="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded">{profile.slice(0,3)}...</h4>
+                    <h4 className="align-self-center pull-right img-50 rounded-circle blur-up lazyloaded">Admin</h4>
                     <div className="dotted-animation">
                         <span className="animate-circle"></span>
                         <span className="main-circle"></span>
